@@ -27,14 +27,13 @@ const Country = ({country, handleVisitedCountry, handleAddFlag}) => {
 					<h2 className="font-semibold">Population: {population}</h2>
 					<h3 className="font-semibold">Area: {area}</h3>
 					<p className="font-semibold"><small>Code: {cca3}</small></p>
+					<button onClick={handleVisited} className="btn btn-success mt-2">{visited ? 'Visited' : 'Going'}</button>
+					<span className="font-semibold ml-2">{visited ? 'I have visited this country' : 'i want to visit'}</span>
 
-						<div className="flex gap-2">
+					<div className="flex gap-2 mt-2">
 							<button onClick={() => handleAddFlag(flags.png)} className="btn btn-info ">Add Flag</button>
 							<button onClick={()=> handleVisitedCountry(country)} className="btn btn-warning block">Mark Visited</button>
-						</div>
-
-					<button onClick={handleVisited} className="btn btn-success mt-2">{visited ? 'Visited' : 'Going'}</button>
-					{visited ? 'I have visited this country' : 'i want to visit'}
+					</div>
 				</div>
 
 				<div>
